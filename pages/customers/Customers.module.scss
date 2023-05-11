@@ -1,0 +1,87 @@
+@import '../../styles/mixins';
+
+.container {
+	background-color: rgb(243 244 246);
+	min-height: 100vh;
+}
+
+.text {
+	display: flex;
+	justify-content: space-between;
+	padding: 16px;
+}
+
+.box {
+	padding: 16px;
+}
+
+.box2 {
+	// width: 100%;
+	margin: auto;
+	padding: 16px;
+	border-radius: 8px;
+	background-color: white;
+	overflow-y: auto;
+}
+
+.title {
+	margin-top: 12px;
+	margin-bottom: 12px;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	@include media('tablet') {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+	@include media('desktop') {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+
+.email {
+	text-align: right;
+	@include media('tablet') {
+		text-align: left;
+	}
+}
+
+.last {
+	display: none;
+	@include media('desktop') {
+		display: grid;
+	}
+}
+.metod {
+	display: none;
+	@include media('tablet') {
+		display: grid;
+	}
+}
+.item {
+	background-color: rgb(249 250 251);
+	border-radius: 8px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	padding: 8px;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	&:hover,
+	:focus {
+		background-color: rgb(243 244 246);
+	}
+	@include media('tablet') {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+	@include media('desktop') {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+
+.icon {
+    color: rgb(107 33 168);
+}

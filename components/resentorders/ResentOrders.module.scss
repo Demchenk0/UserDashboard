@@ -1,0 +1,70 @@
+@import '../../styles/mixins';
+
+.box {
+	width: 100%;
+	position: relative;
+	height: 50vh;
+	margin: auto;
+	// padding: 16px;
+	border-radius: 8px;
+	background-color: white;
+	grid-column: span 1 / span 1;
+    overflow-y: scroll;
+
+	// @include media('tablet') {
+	// 	grid-column: span 2 / span 2;
+	// }
+	@include media('desktop') {
+		height: 70vh;
+	}
+}
+
+.item {
+	background-color: rgb(248 250 252);
+	border-radius: 8px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	padding: 12px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	&:hover,
+	:focus {
+		background-color: rgb(241 245 249);
+	}
+}
+.iconContainer {
+	background-color: rgb(243 232 255);
+	border-radius: 8px;
+	padding: 16px;
+}
+.icon {
+	color: rgb(107 33 168);
+}
+.boxtext {
+	padding-left: 16px;
+}
+
+.first {
+	color: rgb(31 41 55);
+	font-weight: 700;
+}
+
+.second {
+    color: rgb(156 163 175);
+    font-size: 14px;
+    line-height: 20px;
+}
+.third{
+    position: absolute;
+    right: 24px;
+    font-size: 14px;
+    line-height: 20px;
+    @include media('tablet') {
+		display: none;
+	}
+    @include media('desktop') {
+		display: flex;
+
+	}
+}

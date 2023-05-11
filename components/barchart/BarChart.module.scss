@@ -1,0 +1,17 @@
+@import '../../styles/mixins';
+
+.box {
+	width: 100%;
+    position: relative;
+    height: 50vh;
+    margin: auto;
+    // padding: 16px;
+    border-radius: 8px; 
+    background-color: white;
+	@include media('tablet') {
+		grid-column: span 2 / span 2;
+	}
+    @include media('desktop') {
+        height: 70vh;
+	}
+}

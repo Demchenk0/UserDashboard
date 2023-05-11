@@ -167,8 +167,6 @@ div.lb-dataContainer {
 
   @include media('tablet') {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-
-
 	}
 }
 
