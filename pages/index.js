@@ -1,5 +1,10 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
+import Header from '../components/header/Header'
+import TopCards from '../components/topcards/TopCards'
+import BarChart from '../components/barchart/BarChart'
+import ResentOrders from '../components/resentorders/ResentOrders'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,9 +17,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header></header>
-      <main >
-        <hero></hero>
+      <main className='main' >
+        <Header />
+        <TopCards />
+        <div className="boxChart">
+        <BarChart />
+        <ResentOrders />
+        </div>
       </main>
       <footer></footer>
 
