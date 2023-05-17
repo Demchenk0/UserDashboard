@@ -1,0 +1,133 @@
+@import '../../styles/mixins';
+
+.bg {
+	background-color: rgb(243 244 246);
+	min-height: 100vh;
+}
+.boxtext {
+	display: flex;
+	justify-content: space-between;
+	// padding-left: 16px;
+	// padding-right: 16px;
+	// padding-top: 16px;
+	padding: 16px 16px 0 16px;
+}
+
+.box {
+	padding: 16px;
+}
+
+.el {
+	margin: auto;
+	padding: 16px;
+	border-radius: 8px;
+	// border: 1px solid transparent;
+	background-color: white;
+	overflow-y: auto;
+}
+
+.all {
+	margin-top: 12px;
+	margin-bottom: 12px;
+	padding: 8px;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	@include media('tablet') {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+	@include media('desktop') {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+
+.spanS {
+	text-align: right;
+	@include media('tablet') {
+		text-align: left;
+	}
+}
+
+.spanLO {
+	display: none;
+	@include media('desktop') {
+		display: grid;
+	}
+}
+
+.spanM {
+	display: none;
+	@include media('tablet') {
+		display: grid;
+	}
+}
+.item{
+    background-color: rgb(249 250 251);
+    border-radius: 8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 8px;
+    display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    @include media('tablet') {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+	@include media('desktop') {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+    &:hover, :focus {
+        background-color: rgb(243 244 246);
+    }
+}
+
+.boxDiv{
+    display: flex;
+}
+.boxIcon {
+    background-color: rgb(243 232 255);
+    padding: 12px;
+    border-radius: 8px;
+}
+.icon {
+    color: rgb(107 33 168);
+}
+.boxMoney{
+    padding-left: 16px;
+}
+.moneyText {
+    color: rgb(31 41 55);
+    font-weight: 700;
+}
+.moneyName {
+    color: rgb(31 41 55);
+    font-size: 14px; 
+    line-height: 20px; 
+}
+.pText{
+    color: rgb(75 85 99);
+    text-align: right;
+	@include media('tablet') {
+		text-align: left;
+	}
+}
+
+.dateOrder {
+    display: none;
+    @include media('desktop') {
+        display: flex;
+    }
+}
+
+.boxMethod{
+    display: none;
+    @include media('tablet') {
+		display: flex;
+        justify-content: space-between;
+        align-items: center;
+	}
+}
