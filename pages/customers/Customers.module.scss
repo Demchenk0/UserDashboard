@@ -81,7 +81,42 @@
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
 }
-
+.boxicon {
+	display: flex;
+	align-items: center;
+}
+.bgicon {
+	background-color: rgb(243 232 255);
+	padding: 12px;
+	border-radius: 5px;
+}
 .icon {
-    color: rgb(107 33 168);
+	color: rgb(107 33 168);
+}
+
+.ordertext {
+	padding-left: 16px;
+}
+
+.email {
+	color: rgb(75 85 99);
+	text-align: right;
+	@include media('tablet') {
+		text-align: left;
+	}
+}
+.date{
+  display: none;
+  @include media('desktop') {
+		display: flex;
+	}
+}
+
+.method{
+  display: none;
+  @include media('tablet') {
+		display: flex;
+    justify-content: space-between;
+    align-items: center;
+	}
 }

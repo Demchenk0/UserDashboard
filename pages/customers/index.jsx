@@ -21,12 +21,19 @@ const customers = () => {
 					<ul>
 						{data.map((order, id) => (
 							<li kye={id} className={styles.item}>
-                  <div>
-                    <div>
-                      <BsPersonFill className={styles.icon}/> 
-                    </div>
-                  </div>
-              </li>
+								<div className={styles.boxicon}>
+									<div className={styles.bgicon}>
+										<BsPersonFill className={styles.icon} />
+									</div>
+                  <p className={styles.ordertext}>{order.name.first + '' + order.name.last}</p>
+								</div>
+                <p className={styles.email}>{order.name.first}@gmail.com</p>
+                <p className={styles.date}>{order.date}</p>
+                <div className={styles.method}>
+                  <p>{order.method}</p>
+                  <BsThreeDotsVertical />
+                </div>
+							</li>
 						))}
 					</ul>
 				</div>
